@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket test</title>
+</head>
+<body>
+
+<div>
+    <div>
+        <button id="connect" onclick="connect();">Connect</button>
+        <button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect</button>
+    </div>
+    <div id="conversationDiv">
+        <p>
+            <label>notice content?</label>
+        </p>
+        <p>
+            <textarea id="name" rows="5"></textarea>
+        </p>
+        <button id="sendName" onclick="sendName();">Send</button>
+        <p id="response"></p>
+    </div>
+</div>
+
+
+<script src="//cdn.jsdelivr.net/sockjs/1.0.1/sockjs.min.js"></script>
+<script src="js/stompjs/stomp.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
