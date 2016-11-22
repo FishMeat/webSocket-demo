@@ -4,7 +4,7 @@ var noticeSocket = function () {
     stompClient.connect({}, function () {
         console.log('notice socket connected!');
         stompClient.subscribe('/topic/testWebSocket', function (data) {
-            console.log('successed!');
+            console.log('成功收到数据：' + data);
         });
     });
 };
