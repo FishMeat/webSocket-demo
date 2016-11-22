@@ -17,7 +17,7 @@ public class WebSocketController {
     @Autowired
     private SimpMessagingTemplate simpMessagingTemplate;
 
-    @MessageMapping("/greeting")
+    @MessageMapping("/testWebSocket")
     public String handle(String greeting) {
         return "[" + System.currentTimeMillis() + "]: " + greeting;
     }
@@ -26,7 +26,7 @@ public class WebSocketController {
     @ResponseBody
     public void greet(String greeting) {
         String text = "[" +  System.currentTimeMillis() + "]:" + greeting;
-        this.simpMessagingTemplate.convertAndSend("/topic/greet", text);
+        this.simpMessagingTemplate.convertAndSend("/topic/testWebSocket", text);
     }
 
 

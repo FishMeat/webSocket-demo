@@ -28,7 +28,7 @@ function disconnect() {
 // 向‘/app/change-notice’服务端发送消息
 function sendName() {
     var value = document.getElementById('name').value;
-    stompClient.send("/app/greeting", {}, value);
+    stompClient.send("/app/testWebSocket", {}, value);
 }
 
 connect();

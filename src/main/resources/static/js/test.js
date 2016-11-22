@@ -3,8 +3,8 @@ var noticeSocket = function () {
     var stompClient = Stomp.over(s);
     stompClient.connect({}, function () {
         console.log('notice socket connected!');
-        stompClient.subscribe('/topic/greeting', function (data) {
-            console.log(data);
+        stompClient.subscribe('/topic/testWebSocket', function (data) {
+            console.log('successed!');
         });
     });
 };
